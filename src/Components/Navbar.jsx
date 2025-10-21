@@ -72,7 +72,7 @@ const Navbar = () => {
               <li key={ind}>
                 <NavLink
                   className={({ isActive }) =>
-                    isActive ? "border-b-3 border-red-600" : ""
+                    isActive ? "border-b-3 border-red-600" : "text-lg"
                   }
                   to={link.path}
                 >
@@ -83,7 +83,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Login</a>
+          <a className="btn px-5 text-xl !font-orbitron bg-red-600">Login</a>
         </div>
       </div>
     </div>
