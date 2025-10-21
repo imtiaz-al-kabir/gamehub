@@ -1,0 +1,202 @@
+[
+  {
+    "id": "1",
+    "title": "Player Unknown's Battle Ground: PUBG",
+    "coverPhoto": "https://i.ibb.co.com/JRjYKWcm/pubg.jpg",
+    "category": "FPS",
+    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
+    "ratings": "4.5",
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Call of Duty: Ghost",
+    "coverPhoto": "https://i.ibb.co.com/Tx40j1WH/cod.jpg",
+    "category": "FPS",
+    "downloadLink": "https://www.callofduty.com/mobile",
+    "description": "Experience classic Call of Duty maps and modes anytime, anywhere with high-quality gameplay optimized for mobile.",
+    "ratings": "4.7",
+    "developer": "Activision"
+  },
+  {
+    "id": "3",
+    "title": "Genshin Impact",
+    "coverPhoto": "https://i.ibb.co.com/pvkF545q/gensen.jpg",
+    "category": "Action RPG",
+    "downloadLink": "https://genshin.hoyoverse.com/en/",
+    "description": "Genshin Impact is an open-world action RPG featuring elemental magic, exploration, and a vast fantasy world to discover.",
+    "ratings": "4.6",
+    "developer": "HoYoverse"
+  },
+  {
+    "id": "4",
+    "title": "Clash of Clans",
+    "coverPhoto": "https://i.ibb.co.com/gLX6dCRZ/coc.jpg",
+    "category": "Strategy",
+    "downloadLink": "https://supercell.com/en/games/clashofclans/",
+    "description": "Build your village, raise a clan, and compete in epic Clan Wars with millions of players worldwide.",
+    "ratings": "4.4",
+    "developer": "Supercell"
+  },
+  {
+    "id": "5",
+    "title": "Fortnite",
+    "coverPhoto": "https://i.ibb.co.com/3mCfpqv4/fortnit.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.epicgames.com/fortnite/en-US/home",
+    "description": "Join the worldwide phenomenon — build, battle, and create in Fortnite’s ever-evolving universe of fun and chaos.",
+    "ratings": "4.3",
+    "developer": "Epic Games"
+  },
+  {
+    "id": "6",
+    "title": "Among Us",
+    "coverPhoto": "https://i.ibb.co.com/DDHcJ0md/among.jpg",
+    "category": "Social Deduction",
+    "downloadLink": "https://www.innersloth.com/games/among-us/",
+    "description": "Among Us is an online party game about teamwork and betrayal. Work together to complete tasks or find the impostor!",
+    "ratings": "4.2",
+    "developer": "Innersloth"
+  },
+  {
+    "id": "7",
+    "title": "Valorant",
+    "coverPhoto": "https://i.ibb.co.com/Vc8DwVMY/valorant.jpg",
+    "category": "Tactical Shooter",
+    "downloadLink": "https://playvalorant.com/",
+    "description": "A competitive 5v5 tactical shooter blending precise gunplay with unique agent abilities for strategic gameplay.",
+    "ratings": "4.8",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "8",
+    "title": "Minecraft",
+    "coverPhoto": "https://i.ibb.co.com/275yq8ff/mine.jpg",
+    "category": "Sandbox",
+    "downloadLink": "https://www.minecraft.net/",
+    "description": "Explore infinite worlds, build amazing structures, and survive the night in this creative sandbox adventure.",
+    "ratings": "4.9",
+    "developer": "Mojang Studios"
+  },
+  {
+    "id": "9",
+    "title": "League of Legends",
+    "coverPhoto": "https://i.ibb.co.com/LdFbbgy2/lol.jpg",
+    "category": "MOBA",
+    "downloadLink": "https://www.leagueoflegends.com/en-us/",
+    "description": "Join the League of Legends, a fast-paced competitive game where strategy, teamwork, and tactics are key to victory.",
+    "ratings": "4.7",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "10",
+    "title": "Apex Legends Mobile",
+    "coverPhoto": "https://i.ibb.co.com/3Y7VCJ5H/apex-m.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.ea.com/games/apex-legends/apex-legends-mobile",
+    "description": "Apex Legends Mobile delivers fast-paced, high-action gameplay with squad-based battles and tactical gameplay.",
+    "ratings": "4.6",
+    "developer": "Respawn Entertainment"
+  },
+  {
+    "id": "11",
+    "title": "Brawl Stars",
+    "coverPhoto": "https://i.ibb.co.com/HfmpxtS1/brawl.jpg",
+    "category": "Multiplayer",
+    "downloadLink": "https://supercell.com/en/games/brawlstars/",
+    "description": "Brawl Stars is a multiplayer online battle game where players compete in various game modes to win trophies.",
+    "ratings": "4.5",
+    "developer": "Supercell"
+  },
+  {
+    "id": "12",
+    "title": "PUBG New State",
+    "coverPhoto": "https://i.ibb.co.com/fRNwdQf/pubgnewstate.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://newstate.pubg.com/",
+    "description": "PUBG New State is a futuristic take on PUBG Mobile, featuring next-gen graphics, new gameplay features, and a fresh new world.",
+    "ratings": "4.4",
+    "developer": "Krafton"
+  },
+  {
+    "id": "13",
+    "title": "Mobile Legends: Bang Bang",
+    "coverPhoto": "https://i.ibb.co.com/Kpq7Lx4c/mlbb.jpg",
+    "category": "MOBA",
+    "downloadLink": "https://www.mobilelegends.com/",
+    "description": "Team up with friends in this exciting 5v5 real-time multiplayer online battle arena game.",
+    "ratings": "4.3",
+    "developer": "Moonton"
+  },
+  {
+    "id": "14",
+    "title": "Roblox",
+    "coverPhoto": "https://i.ibb.co.com/nq6m3H9H/roblox.jpg",
+    "category": "Sandbox",
+    "downloadLink": "https://www.roblox.com/",
+    "description": "Roblox is a virtual universe where users can create, share experiences, and play games made by others.",
+    "ratings": "4.4",
+    "developer": "Roblox Corporation"
+  },
+  {
+    "id": "15",
+    "title": "Clash Royale",
+    "coverPhoto": "https://i.ibb.co.com/MDn67kQ3/clashroyal.jpg",
+    "category": "Strategy",
+    "downloadLink": "https://supercell.com/en/games/clashroyale/",
+    "description": "Clash Royale is a real-time strategy game with card-based mechanics where players battle for trophies.",
+    "ratings": "4.5",
+    "developer": "Supercell"
+  },
+  {
+    "id": "16",
+    "title": "Dragon Ball Legends",
+    "coverPhoto": "https://i.ibb.co.com/cc4XB5Mp/dbz.jpg",
+    "category": "Fighting",
+    "downloadLink": "https://db-legends.bn-ent.net/",
+    "description": "Dragon Ball Legends is a 3D action fighting game where players can battle using their favorite Dragon Ball characters.",
+    "ratings": "4.6",
+    "developer": "Bandai Namco"
+  },
+  {
+    "id": "17",
+    "title": "Call of Duty: Warzone Mobile",
+    "coverPhoto": "https://i.ibb.co.com/13LDyNj/cocmobile.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.callofduty.com/warzone-mobile",
+    "description": "Call of Duty: Warzone Mobile is the mobile version of the popular battle royale game offering action-packed gameplay.",
+    "ratings": "4.7",
+    "developer": "Activision"
+  },
+  {
+    "id": "18",
+    "title": "Shadowgun Legends",
+    "coverPhoto": "https://i.ibb.co.com/DPngCNYy/Shadowgun-Legends.jpg",
+    "category": "FPS",
+    "downloadLink": "https://www.madfingergames.com/games/shadowgun-legends/",
+    "description": "Shadowgun Legends is a fast-paced multiplayer shooter with immersive story-driven campaigns and intense PvP combat.",
+    "ratings": "4.5",
+    "developer": "Madfinger Games"
+  },
+  {
+    "id": "19",
+    "title": "Identity V",
+    "coverPhoto": "https://i.ibb.co.com/KzxTR9Kk/Identity.jpg",
+    "category": "Survival Horror",
+    "downloadLink": "https://www.identityvgame.com/",
+    "description": "Identity V is an asymmetrical horror game where players are either hunters or survivors in a thrilling chase.",
+    "ratings": "4.3",
+    "developer": "NetEase Games"
+  },
+  {
+    "id": "20",
+    "title": "FIFA Mobile",
+    "coverPhoto": "https://i.ibb.co.com/qFd54wNV/fifa.jpg",
+    "category": "Sports",
+    "downloadLink": "https://www.ea.com/games/fifa/fifa-mobile",
+    "description": "FIFA Mobile is a sports game that lets players create their own soccer team and compete in various football modes.",
+    "ratings": "4.6",
+    "developer": "EA Sports"
+  }
+]
