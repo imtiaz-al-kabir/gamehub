@@ -8,7 +8,7 @@ const Banner = () => {
   const scrollWidth = games.length * 320;
 
   return (
-    <div className="overflow-hidden h-[500px]">
+    <div className="overflow-hidden h-[500px] ">
       <motion.div
         className="flex gap-6"
         animate={{ x: [-scrollWidth, 0] }}

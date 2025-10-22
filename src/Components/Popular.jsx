@@ -19,8 +19,8 @@ const Popular = () => {
   return (
     <div className="overflow-hidden py-6 ">
       <div className="flex justify-between items-center mx-5 mb-8">
-        <p className="!font-orbitron font-bold text-2xl text-red-600 ">
-          Popular Games<span className="text-xs">({topGames.length})</span>
+        <p className="!font-orbitron font-bold text-2xl text-white ">
+          POPULAR GAMES <span className="text-xs">({topGames.length})</span>
         </p>
         <Link
           to="/games"
@@ -44,7 +44,7 @@ const Popular = () => {
         }}
       >
         {topGames.concat(topGames).map((game, index) => (
-          <div key={index} className="flex-shrink-0 w-[300px] h-full">
+          <div key={index} className="flex-shrink-0 w-[300px]">
             <GameCard game={game} />
           </div>
         ))}

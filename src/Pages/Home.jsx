@@ -1,5 +1,6 @@
 import Banner from "../Components/Banner";
 import Hero from "../Components/Hero";
+import Newsletter from "../Components/Newsletter";
 import Popular from "../Components/Popular";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
       <Hero />
       <Banner/>
       <Popular/>
+      <Newsletter/>
     </div>
   );
 };

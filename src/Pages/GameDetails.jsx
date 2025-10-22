@@ -10,7 +10,6 @@ const GameDetails = () => {
 
   const game = location.state;
   const {
-    id,
     title,
     coverPhoto,
     ratings,
@@ -29,7 +28,7 @@ const GameDetails = () => {
 
   return (
     <div
-      className="relative min-h-screen bg-cover bg-center bg-no-repeat"
+      className="relative min-h-screen  bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: `url(${coverPhoto})`,
       }}
@@ -65,6 +64,7 @@ const GameDetails = () => {
               "Immerse yourself in the world of this epic game, featuring stunning visuals, engaging gameplay, and a captivating storyline."}
           </p>
 
+          <p className="text-sm">Developed by: {developer}</p>
           <div className="flex items-center gap-2 mt-4">
             <CiStar className="text-yellow-400" />
             <p className="text-lg font-semibold">Rating: {ratings} / 5</p>
@@ -77,7 +77,7 @@ const GameDetails = () => {
 
           <div className="mt-6 flex gap-4">
             <motion.a
-              href={game.downloadLink || "#"}
+              href={downloadLink || "#"}
               target="_blank"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

@@ -20,7 +20,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className=" bg-[#10121e] text-white shadow">
+    <div className=" bg-gradient-to-b from-black via-[#462022] to-black text-white shadow">
       <div className="navbar container mx-auto ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -62,7 +62,11 @@ const Navbar = () => {
           <a className="btn btn-ghost text-xl">
             <img className="size-10" src="/logo.png" alt="" />
             <h2 className="hidden sm:block">
-              Game<span className="font-serif font-extrabold text-red-700 text-2xl">H</span>ub
+              Game
+              <span className="font-serif font-extrabold text-red-700 text-2xl">
+                H
+              </span>
+              ub
             </h2>
           </a>
         </div>
@@ -83,7 +87,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn px-5 text-xl !font-orbitron bg-red-600">Login</a>
+          <a className="btn px-5 text-xl !font-orbitron bg-gradient-to-r from-red-600 to-red-400 text-white py-2 rounded-lg font-semibold hover:from-red-500 hover:to-pink-500 transition-all duration-300">Login</a>
         </div>
       </div>
     </div>
