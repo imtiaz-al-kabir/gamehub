@@ -6,6 +6,8 @@ import Error from "../Pages/Error";
 import Games from "../Pages/Games";
 import Home from "../Pages/Home";
 import GameDetails from "../Pages/GameDetails";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,12 @@ const router = createBrowserRouter([
         path: "/contact",
         Component: Contact,
       },
+      {
+        path:"/login",Component:Login
+      },
+      {
+        path:"/register",Component:Register
+      }
     ],
   },
 ]);

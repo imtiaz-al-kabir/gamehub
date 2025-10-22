@@ -2,8 +2,8 @@ const Newsletter = () => {
   return (
     <div className="w-full bg-transparent px-2 text-center text-white py-20 flex flex-col items-center justify-center">
       <p className="text-indigo-500 font-medium">Get updated</p>
-      <h1 className="max-w-lg font-semibold text-4xl/[44px] mt-2">
-        Subscribe to our newsletter & get the latest news
+      <h1 className="max-w-xl font-semibold text-4xl/[44px] mt-2 !font-orbitron">
+        Subscribe to our newsletter & get the latest game news
       </h1>
       <div className="flex items-center justify-center mt-10 border border-slate-600 focus-within:outline focus-within:outline-indigo-600 text-sm rounded-full h-14 max-w-md w-full">
         <input

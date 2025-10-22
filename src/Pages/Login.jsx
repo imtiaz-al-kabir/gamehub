@@ -1,8 +1,8 @@
-import { motion } from "motion/react";
+import React from 'react';
 
-const Contact = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-red-800 via-black to-black flex justify-center items-center px-6 py-16">
+const Login = () => {
+    return (
+       <div className="min-h-screen bg-gradient-to-br from-red-800 via-black to-black flex justify-center items-center px-6 py-16">
       {/* Contact Card */}
       <motion.div
         className="w-full max-w-lg bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl p-10 flex flex-col gap-6"
@@ -48,7 +48,7 @@ const Contact = () => {
         </form>
       </motion.div>
     </div>
-  );
+    );
 };
 
-export default Contact;
+export default Login;

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   const navLink = [
@@ -59,7 +59,7 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">
+          <Link to="/" className="text-xl flex items-center gap-2">
             <img className="size-10" src="/logo.png" alt="" />
             <h2 className="hidden sm:block">
               Game
@@ -68,7 +68,7 @@ const Navbar = () => {
               </span>
               ub
             </h2>
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
