@@ -3,9 +3,9 @@ import RootLayout from "../Layouts/RootLayout";
 import About from "../Pages/About";
 import Contact from "../Pages/Contact";
 import Error from "../Pages/Error";
+import GameDetails from "../Pages/GameDetails";
 import Games from "../Pages/Games";
 import Home from "../Pages/Home";
-import GameDetails from "../Pages/GameDetails";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 
@@ -36,11 +36,13 @@ const router = createBrowserRouter([
         Component: Contact,
       },
       {
-        path:"/login",Component:Login
+        path: "/login",
+        Component: Login,
       },
       {
-        path:"/register",Component:Register
-      }
+        path: "/register",
+        Component: Register,
+      },
     ],
   },
 ]);

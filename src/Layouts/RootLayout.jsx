@@ -3,9 +3,12 @@ import Navbar from "../Components/Navbar";
 
 const RootLayout = () => {
   const match = 
-  useMatch("/games/:id") || 
-  useMatch("/about")||
-  useMatch("/contact");
+  useMatch("/games/:id") 
+  
+  
+  // || 
+  // useMatch("/about")||
+  // useMatch("/contact");
   return (
     <div className="bg-gradient-to-b from-[#212224] via-[#462022] to-black">
       <header className="sticky top-0 scroll-smooth z-50 ">

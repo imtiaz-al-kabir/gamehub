@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from "motion/react"
+import { Link } from 'react-router';
 
 const Register = () => {
     return (
@@ -12,30 +14,35 @@ const Register = () => {
         transition={{ duration: 0.7 }}
       >
         <h1 className="text-4xl font-orbitron font-bold text-red-500 text-center">
-          Contact Us
+          Sign up
         </h1>
         <p className="text-gray-200 text-center">
-          Have questions or want to collaborate? Fill out the form below and
-          we’ll get back to you.
+          Welcome Back
         </p>
 
         <form className="flex flex-col gap-4">
           <motion.input
             type="text"
-            placeholder="Your Name"
+            placeholder="Enter Name"
             className="p-3 rounded-lg bg-black/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
             whileFocus={{ scale: 1.02 }}
           />
           <motion.input
             type="email"
-            placeholder="Your Email"
+            placeholder="Enter Email"
             className="p-3 rounded-lg bg-black/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
             whileFocus={{ scale: 1.02 }}
           />
-          <motion.textarea
-            placeholder="Your Message"
-            rows="5"
-            className="p-3 rounded-lg bg-black/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 transition resize-none"
+          <motion.input
+            type="text"
+            placeholder="Enter Photo URL"
+            className="p-3 rounded-lg bg-black/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
+            whileFocus={{ scale: 1.02 }}
+          />
+          <motion.input
+            type="password"
+            placeholder="Enter Password"
+            className="p-3 rounded-lg bg-black/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
             whileFocus={{ scale: 1.02 }}
           />
           <motion.button
@@ -44,9 +51,10 @@ const Register = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Send Message
+            Sign Up
           </motion.button>
         </form>
+        <p>alreadey have account please <Link to="/login">Login</Link> </p>
       </motion.div>
     </div> 
         </div>

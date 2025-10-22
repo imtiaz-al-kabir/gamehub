@@ -87,7 +87,12 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn px-5 text-xl !font-orbitron bg-gradient-to-r from-red-600 to-red-400 text-white py-2 rounded-lg font-semibold hover:from-red-500 hover:to-pink-500 transition-all duration-300">Login</a>
+          <Link
+            to={"/login"}
+            className="btn px-5 text-xl !font-orbitron bg-gradient-to-r from-red-600 to-red-400 text-white py-2 rounded-lg font-semibold hover:from-red-500 hover:to-pink-500 transition-all duration-300"
+          >
+            Login
+          </Link>
         </div>
       </div>
     </div>
