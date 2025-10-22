@@ -3,34 +3,34 @@ import { use } from "react";
 import { DataContext } from "../Context/DataContext";
 
 const Banner = () => {
-  const { data } = use(DataContext);
+  const { games } = use(DataContext);
 
-  const scrollWidth = data.length * 600; // approximate width of all slides
+  const scrollWidth = games.length * 320;
 
   return (
-    <div className="overflow-hidden w-full">
+    <div className="overflow-hidden h-[500px]">
       <motion.div
-        className="flex"
-        animate={{ x: [-scrollWidth, 0] }} // slide from right to left
+        className="flex gap-6"
+        animate={{ x: [-scrollWidth, 0] }}
         transition={{
           x: {
             repeat: Infinity,
             repeatType: "loop",
-            duration: 80, 
+            duration: 100,
             ease: "linear",
           },
         }}
       >
-        {data.map((singleImg) => (
+        {games.map((singleImg) => (
           <img
             key={singleImg.id}
             src={singleImg.coverPhoto}
             alt="image"
-            className="h-[300px] md:h-[400px] lg:h-[500px] rounded-xl mr-4"
+            className="h-[250px] md:h-[350px] lg:h-[450px] rounded-xl mr-4"
           />
         ))}
-        {/* Duplicate images for seamless loop */}
-        {data.map((singleImg) => (
+
+        {games.map((singleImg) => (
           <img
             key={singleImg.id}
             src={singleImg.coverPhoto}

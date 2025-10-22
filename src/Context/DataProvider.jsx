@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { DataContext } from './DataContext';
 
 const DataProvider = ({children}) => {
-const [data,setData]=useState([])
+const [games,setGames]=useState([])
 const [loading,setLoading]=useState(true)
 
 
@@ -12,7 +12,7 @@ const fetchData=async()=>{
     try {
         const res=await fetch("/games.json");
         const result=await res.json();
-        setData(result)
+        setGames(result)
         setLoading(false)
 
 
@@ -26,7 +26,7 @@ fetchData()
 },[])
 
 const dataInfo={
-    data,loading
+    games,loading
 }
     return (
         <DataContext value={dataInfo}>

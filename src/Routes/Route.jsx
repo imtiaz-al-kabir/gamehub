@@ -5,6 +5,7 @@ import Contact from "../Pages/Contact";
 import Error from "../Pages/Error";
 import Games from "../Pages/Games";
 import Home from "../Pages/Home";
+import GameDetails from "../Pages/GameDetails";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/games",
         Component: Games,
+      },
+      {
+        path: "/games/:id",
+        Component: GameDetails,
       },
       {
         path: "/about",

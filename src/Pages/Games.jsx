@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { use } from 'react';
+import { DataContext } from '../Context/DataContext';
+import GameCard from '../Components/GameCard';
 
 const Games = () => {
+
+    const {games}=use(DataContext)
     return (
-        <div>
-           I am agmes 
+        <div className='py-10'>
+            <div className='grid grid-cols-3 gap-6 '>
+                {
+                    games.map(game=><GameCard game={game} />)
+                }
+            </div>
+           {
+
+           }
         </div>
     );
 };
