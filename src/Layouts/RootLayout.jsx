@@ -10,7 +10,7 @@ const RootLayout = () => {
   // useMatch("/about")||
   // useMatch("/contact");
   return (
-    <div className="bg-gradient-to-b from-[#212224] via-[#462022] to-black">
+    <div className="bg-gradient-to-br from-black via-red-900/40 to-black ">
       <header className="sticky top-0 scroll-smooth z-50 ">
         <Navbar />
       </header>

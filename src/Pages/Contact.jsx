@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-800 via-black to-black flex justify-center items-center px-6 py-16">
+    <div className="min-h-screen  flex justify-center items-center px-6 py-16">
       <title>Contact-GameHub</title>
       <motion.div
         className="w-full max-w-lg bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl p-10 flex flex-col gap-6"
@@ -39,7 +39,11 @@ const Contact = () => {
           />
           <motion.button
             type="submit"
-            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-red-500/50 transition-all duration-300 mt-2"
+            className="
+            bg-gradient-to-r from-red-600 to-red-400 text-white  font-semibold hover:from-red-500 hover:to-pink-500 transition-all duration-300
+            
+            
+            px-6 py-3 rounded-xl shadow-lg shadow-red-500/50  mt-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

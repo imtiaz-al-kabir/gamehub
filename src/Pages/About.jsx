@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-800 via-black to-black text-white px-6 py-16 flex flex-col items-center">
-    <title>About-GameHub</title>
+    <div className="min-h-screen  text-white px-6 py-16 flex flex-col items-center">
+      <title>About-GameHub</title>
       <motion.h1
         className="text-4xl md:text-6xl !font-orbitron font-bold text-red-500 mb-6"
         initial={{ y: -50, opacity: 0 }}
@@ -36,14 +36,13 @@ const About = () => {
           href="/"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="mt-4 inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg shadow-red-500/50"
+          className="mt-4 inline-block
+          bg-gradient-to-r from-red-600 to-red-400 text-white rounded-xl font-semibold hover:from-red-500 hover:to-pink-500  duration-300
+          px-6 py-3  transition-all shadow-lg shadow-red-500/50"
         >
           Explore Games
         </motion.a>
       </motion.div>
-
-     
-   
     </div>
   );
 };
