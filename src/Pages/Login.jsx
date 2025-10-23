@@ -20,7 +20,7 @@ const Login = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-red-900/40 to-black flex justify-center items-center px-6 py-16">
+    <div className="min-h-screen   bg-gradient-to-br from-black via-red-900/40 to-black flex justify-center items-center px-6 py-16">
       <motion.div
         className="w-full max-w-md bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl p-10 flex flex-col gap-6 border border-red-500/20"
         initial={{ y: 40, opacity: 0 }}

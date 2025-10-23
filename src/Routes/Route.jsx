@@ -9,6 +9,7 @@ import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute";
+import Loading from "../Components/Loading";
 
 const router = createBrowserRouter([
   {
@@ -49,7 +50,9 @@ const router = createBrowserRouter([
         Component: Register,
       },
     ],
+
   },
+ 
 ]);
 
 export default router;

@@ -66,7 +66,7 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-red-700 mt-8 pt-4 text-center text-gray-400 text-sm">
-        © {new Date().getFullYear()} Gaming Portal. All rights reserved.
+        © {new Date().getFullYear()} GameHub Portal. All rights reserved.
       </div>
     </footer>
   );
