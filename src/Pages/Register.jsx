@@ -1,11 +1,12 @@
 import { motion } from "motion/react";
-import { Link } from "react-router";
-import GoogleLogin from "../Components/GoogleLogin";
 import { use } from "react";
+import { Link, useNavigate } from "react-router";
+import GoogleLogin from "../Components/GoogleLogin";
 import { AuthContext } from "../Context/AuthContext";
 
 const Register = () => {
-  const {createUser,setUser}=use(AuthContext)
+  const { createUser, setUser } = use(AuthContext);
+  const navigate = useNavigate();
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -14,10 +15,12 @@ const Register = () => {
     const password = e.target.password.value;
     console.log(name, email, password, photo);
 
-    createUser(email,password).then(
-
-      result=>setUser(result.user)
-    ).catch(error=>console.log(error))
+    createUser(email, password)
+      .then((result) => {
+        setUser(result.user);
+        navigate("/login");
+      })
+      .catch((error) => console.log(error));
   };
 
   return (

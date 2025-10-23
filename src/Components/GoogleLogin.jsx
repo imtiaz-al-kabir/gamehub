@@ -1,13 +1,20 @@
 import { motion } from "motion/react";
 import { use } from "react";
 import { FcGoogle } from "react-icons/fc";
+import { useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../Context/AuthContext";
 const GoogleLogin = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const { googleSignin, setUser } = use(AuthContext);
 
   const handleGoogle = () => {
     googleSignin()
-      .then((result) => setUser(result.user))
+      .then((result) => {
+        setUser(result.user);
+
+        navigate(`${location.state ? location.state : "/"}`);
+      })
       .catch((err) => console.log(err));
   };
   return (

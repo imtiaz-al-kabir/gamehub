@@ -1,18 +1,23 @@
 import { motion } from "motion/react";
 import { use } from "react";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import GoogleLogin from "../Components/GoogleLogin";
 import { AuthContext } from "../Context/AuthContext";
 
 const Login = () => {
   const { loginUser } = use(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     loginUser(email, password)
-      .then((result) => result.user)
-      .catch(error=>console.log(error));
+      .then((result) => {
+        result.user;
+        navigate(`${location.state ? location.state : "/"}`);
+      })
+      .catch((error) => console.log(error));
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-red-900/40 to-black flex justify-center items-center px-6 py-16">
