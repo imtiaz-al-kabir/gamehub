@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { use, useState } from "react";
+import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 import { Link, useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import GoogleLogin from "../Components/GoogleLogin";
@@ -8,7 +9,7 @@ import { AuthContext } from "../Context/AuthContext";
 const Register = () => {
   const { createUser, setUser, updateUser } = use(AuthContext);
   const navigate = useNavigate();
-
+  const [show, setShow] = useState(false);
   const [error, setError] = useState("");
   const handleRegister = (e) => {
     e.preventDefault();
@@ -41,7 +42,7 @@ const Register = () => {
           theme: "colored",
         });
         e.target.reset();
-        navigate("/login");
+        navigate("/");
       })
       .catch((error) => setError(error.message));
   };
@@ -84,13 +85,21 @@ const Register = () => {
             className="p-3 rounded-lg bg-black/30 text-white placeholder-gray-400 border border-red-500/20 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
             whileFocus={{ scale: 1.02 }}
           />
-          <motion.input
-            name="password"
-            type="password"
-            placeholder="Enter Password"
-            className="p-3 rounded-lg bg-black/30 text-white placeholder-gray-400 border border-red-500/20 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
-            whileFocus={{ scale: 1.02 }}
-          />
+          <div className="relative">
+            <motion.input
+              name="password"
+              type={show ? "text" : "password"}
+              placeholder="Enter Password"
+              className="w-full p-3 rounded-lg bg-black/30 text-white placeholder-gray-400 border border-red-500/20 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
+              whileFocus={{ scale: 1.02 }}
+            />
+            <div
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 cursor-pointer"
+              onClick={() => setShow(!show)}
+            >
+              {show ? <IoIosEyeOff size={22} /> : <IoIosEye size={22} />}
+            </div>
+          </div>
 
           <motion.button
             type="submit"
