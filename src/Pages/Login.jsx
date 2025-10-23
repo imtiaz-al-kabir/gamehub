@@ -10,7 +10,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [error, setError] = useState("");
-  const [show, setShow] = useState(false); // toggle password visibility
+  const [show, setShow] = useState(false); 
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -18,6 +18,7 @@ const Login = () => {
     const password = e.target.password.value;
     loginUser(email, password)
       .then((result) => {
+        
         navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => setError(error.message));
@@ -48,11 +49,11 @@ const Login = () => {
             whileFocus={{ scale: 1.02 }}
           />
 
-          {/* Password input with eye icon */}
+          
           <div className="relative">
             <motion.input
               name="password"
-              type={show ? "text" : "password"} // toggle type
+              type={show ? "text" : "password"} 
               placeholder="Enter Password"
               className="w-full p-3 rounded-lg bg-black/30 text-white placeholder-gray-400 border border-red-500/20 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
               whileFocus={{ scale: 1.02 }}

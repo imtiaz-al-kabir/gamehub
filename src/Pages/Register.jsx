@@ -6,7 +6,7 @@ import GoogleLogin from "../Components/GoogleLogin";
 import { AuthContext } from "../Context/AuthContext";
 
 const Register = () => {
-  const { createUser, setUser } = use(AuthContext);
+  const { createUser, setUser, updateUser } = use(AuthContext);
   const navigate = useNavigate();
 
   const [error, setError] = useState("");
@@ -27,7 +27,9 @@ const Register = () => {
 
     createUser(email, password)
       .then((result) => {
-        setUser(result.user);
+        updateUser({ displayName: name, photoURL: photo })
+          .then(() => setUser(result.user))
+          .catch((error) => setError(error.message));
         toast.success("🦄 Account Created Successfully!", {
           position: "top-center",
           autoClose: 2000,
@@ -41,7 +43,7 @@ const Register = () => {
         e.target.reset();
         navigate("/login");
       })
-      .catch((error) => console.log(error));
+      .catch((error) => setError(error.message));
   };
 
   return (
@@ -89,7 +91,7 @@ const Register = () => {
             className="p-3 rounded-lg bg-black/30 text-white placeholder-gray-400 border border-red-500/20 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
             whileFocus={{ scale: 1.02 }}
           />
-          {error && <p className="text-red-500 text-sm">{error}</p>}
+
           <motion.button
             type="submit"
             className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-red-600/40 transition-all duration-300 mt-2"
@@ -99,7 +101,7 @@ const Register = () => {
             Sign Up
           </motion.button>
         </form>
-
+        {error && <p className="text-red-500 text-sm">{error}</p>}
         <div className="relative my-3">
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-gray-500/40"></div>
