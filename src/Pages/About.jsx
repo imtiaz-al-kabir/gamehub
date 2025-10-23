@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-800 via-black to-black text-white px-6 py-16 flex flex-col items-center">
-    
+    <title>About-GameHub</title>
       <motion.h1
         className="text-4xl md:text-6xl !font-orbitron font-bold text-red-500 mb-6"
         initial={{ y: -50, opacity: 0 }}

@@ -3,8 +3,8 @@ import { Link } from "react-router";
 const Error = () => {
   return (
     <div>
+      <title>Error 404</title>
       <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-red-800 via-black to-black text-white px-4">
-        {/* Animated glitch "404" */}
         <motion.h1
           className="text-9xl md:text-[12rem] font-orbitron font-bold text-red-500 relative"
           animate={{ scale: [1, 1.1, 1], rotate: [0, -5, 5, 0] }}
@@ -19,7 +19,6 @@ const Error = () => {
           </span>
         </motion.h1>
 
-        {/* Subheading */}
         <motion.p
           className="text-xl md:text-2xl mt-6 text-gray-300 text-center max-w-lg"
           initial={{ opacity: 0, y: 20 }}
@@ -30,7 +29,6 @@ const Error = () => {
           <br /> The game you are looking for does not exist.
         </motion.p>
 
-        {/* Go Home Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -44,7 +42,6 @@ const Error = () => {
           </Link>
         </motion.div>
 
-        {/* Optional glitch effect overlay */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="w-full h-full bg-[url('https://i.ibb.co/7k0FJ7F/noise.png')] opacity-10 animate-pulse mix-blend-overlay"></div>
         </div>

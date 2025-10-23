@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 const Contact = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-800 via-black to-black flex justify-center items-center px-6 py-16">
+      <title>Contact-GameHub</title>
       <motion.div
         className="w-full max-w-lg bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl p-10 flex flex-col gap-6"
         initial={{ scale: 0.95, opacity: 0 }}

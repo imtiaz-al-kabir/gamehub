@@ -3,9 +3,6 @@ import { CiStar } from "react-icons/ci";
 import { TbArrowRightRhombusFilled } from "react-icons/tb";
 import { Link, useLocation } from "react-router";
 const GameDetails = () => {
-  //   const { id } = useParams();
-  //   const { games } = use(DataContext);
-  //   const game = games.find((g) => g.id === id);
   const location = useLocation();
 
   const game = location.state;
@@ -33,12 +30,10 @@ const GameDetails = () => {
         backgroundImage: `url(${coverPhoto})`,
       }}
     >
-      {/* Overlay */}
+      <title>{title}</title>
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
 
-      {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-5 py-16 flex flex-col lg:flex-row gap-10 items-center">
-        {/* Game Image */}
         <motion.img
           src={coverPhoto}
           alt={title}
@@ -48,7 +43,6 @@ const GameDetails = () => {
           className="rounded-2xl shadow-2xl w-[350px] h-[450px] object-cover"
         />
 
-        {/* Game Info */}
         <motion.div
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}

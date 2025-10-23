@@ -1,11 +1,12 @@
 import { motion } from "motion/react";
-import { use } from "react";
+import { use, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import GoogleLogin from "../Components/GoogleLogin";
 import { AuthContext } from "../Context/AuthContext";
 
 const Login = () => {
-  const { loginUser } = use(AuthContext);
+  const { loginUser, resetPassword } = use(AuthContext);
+  const emailRef = useRef();
   const navigate = useNavigate();
   const location = useLocation();
   const handleLogin = (e) => {
@@ -19,8 +20,17 @@ const Login = () => {
       })
       .catch((error) => console.log(error));
   };
+
+  const handleResetPassword = () => {
+    const email = emailRef.current.value;
+    console.log(email);
+    resetPassword(email)
+      .then(() => alert("please check email"))
+      .catch((err) => console.log(err));
+  };
   return (
     <div className="min-h-screen   bg-gradient-to-br from-black via-red-900/40 to-black flex justify-center items-center px-6 py-16">
+      <title>Login-GameHub</title>
       <motion.div
         className="w-full max-w-md bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl p-10 flex flex-col gap-6 border border-red-500/20"
         initial={{ y: 40, opacity: 0 }}
@@ -52,7 +62,7 @@ const Login = () => {
 
           <div className="flex justify-end text-sm">
             <Link
-              to="/forgot-password"
+              to="/reset"
               className="text-red-400 hover:text-red-300 transition font-medium"
             >
               Forgot password?

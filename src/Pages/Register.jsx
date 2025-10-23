@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { use } from "react";
+import { use, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import GoogleLogin from "../Components/GoogleLogin";
 import { AuthContext } from "../Context/AuthContext";
@@ -7,6 +7,8 @@ import { AuthContext } from "../Context/AuthContext";
 const Register = () => {
   const { createUser, setUser } = use(AuthContext);
   const navigate = useNavigate();
+
+  const [error, setError] = useState("");
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -14,10 +16,18 @@ const Register = () => {
     const photo = e.target.photo.value;
     const password = e.target.password.value;
     console.log(name, email, password, photo);
+    const passRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+    if (!passRegex.test(password)) {
+      setError(
+        "Password must have at least 1 uppercase, 1 lowercase, and at least 6 characters long."
+      );
+      return;
+    }
 
     createUser(email, password)
       .then((result) => {
         setUser(result.user);
+        e.target.reset();
         navigate("/login");
       })
       .catch((error) => console.log(error));
@@ -25,6 +35,7 @@ const Register = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-red-900/40 to-black flex justify-center items-center px-6 py-16">
+      <title>Register-GameHub</title>
       <motion.div
         className="w-full max-w-md bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl p-10 flex flex-col gap-6 border border-red-500/20"
         initial={{ y: 40, opacity: 0 }}
@@ -67,7 +78,7 @@ const Register = () => {
             className="p-3 rounded-lg bg-black/30 text-white placeholder-gray-400 border border-red-500/20 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
             whileFocus={{ scale: 1.02 }}
           />
-
+          {error && <p className="text-red-500 text-sm">{error}</p>}
           <motion.button
             type="submit"
             className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-red-600/40 transition-all duration-300 mt-2"

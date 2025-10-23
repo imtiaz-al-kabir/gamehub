@@ -7,9 +7,10 @@ import GameDetails from "../Pages/GameDetails";
 import Games from "../Pages/Games";
 import Home from "../Pages/Home";
 import Login from "../Pages/Login";
+import Profile from "../Pages/Profile";
 import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute";
-import Loading from "../Components/Loading";
+import ResetPassword from "../Components/ResetPassword";
 
 const router = createBrowserRouter([
   {
@@ -49,10 +50,16 @@ const router = createBrowserRouter([
         path: "/register",
         Component: Register,
       },
+      {
+        path: "/profile",
+        Component: Profile,
+      },
+      {
+        path: "/reset",
+        Component: ResetPassword,
+      },
     ],
-
   },
- 
 ]);
 
 export default router;
