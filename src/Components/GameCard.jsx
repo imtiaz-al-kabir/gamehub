@@ -30,14 +30,13 @@ const GameCard = ({ game }) => {
             <span className="text-gray-400">{developer}</span>
           </div>
 
-          <a
-            href={downloadLink}
+          <Link
+            to={downloadLink}
             target="_blank"
-            rel="noopener noreferrer"
             className="block text-center bg-gradient-to-r from-red-600 to-red-400 text-white py-2 rounded-lg font-semibold hover:from-red-500 hover:to-pink-500 transition-all duration-300"
           >
             Download Now
-          </a>
+          </Link>
         </div>
       </div>
     </Link>

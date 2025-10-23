@@ -1,11 +1,18 @@
 import { motion } from "motion/react";
+import { use } from "react";
 import { CiStar } from "react-icons/ci";
 import { TbArrowRightRhombusFilled } from "react-icons/tb";
-import { Link, useLocation } from "react-router";
+import { Link, useLocation, useParams } from "react-router";
+import Loading from "../Components/Loading";
+import { DataContext } from "../Context/DataContext";
 const GameDetails = () => {
   const location = useLocation();
+  console.log(location);
+  const { id } = useParams();
+  const { games } = use(DataContext);
 
-  const game = location.state;
+  const game = games.find((g) => g.id === id);
+  console.log(game);
   const {
     title,
     coverPhoto,
@@ -15,11 +22,10 @@ const GameDetails = () => {
     downloadLink,
     description,
   } = game;
-  console.log(game);
   if (!game)
     return (
       <div className="flex items-center justify-center min-h-screen text-xl font-semibold text-gray-500">
-        Game not found 😢
+        <Loading />
       </div>
     );
 

@@ -1,14 +1,14 @@
 import { motion } from "motion/react";
-import { use, useRef } from "react";
+import { use, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import GoogleLogin from "../Components/GoogleLogin";
 import { AuthContext } from "../Context/AuthContext";
 
 const Login = () => {
-  const { loginUser, resetPassword } = use(AuthContext);
-  const emailRef = useRef();
+  const { loginUser } = use(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
+  const [error, setError] = useState("");
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -18,16 +18,9 @@ const Login = () => {
         result.user;
         navigate(`${location.state ? location.state : "/"}`);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => setError(error.message));
   };
 
-  const handleResetPassword = () => {
-    const email = emailRef.current.value;
-    console.log(email);
-    resetPassword(email)
-      .then(() => alert("please check email"))
-      .catch((err) => console.log(err));
-  };
   return (
     <div className="min-h-screen   bg-gradient-to-br from-black via-red-900/40 to-black flex justify-center items-center px-6 py-16">
       <title>Login-GameHub</title>
@@ -78,7 +71,7 @@ const Login = () => {
             Login
           </motion.button>
         </form>
-
+        {error && <p className="text-red-500 text-sm">{error}</p>}
         <div className="relative my-3">
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-gray-500/40"></div>
