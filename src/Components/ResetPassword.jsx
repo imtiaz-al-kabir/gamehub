@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { use } from "react";
 import { Link } from "react-router";
+import { toast } from "react-toastify";
 import { AuthContext } from "../Context/AuthContext";
 
 const ResetPassword = () => {
@@ -10,7 +11,18 @@ const ResetPassword = () => {
     e.preventDefault();
     const email = e.target.email.value;
     resetPassword(email)
-      .then(() => alert("check Your email"))
+      .then(() =>
+        toast.success("🦄 Email has been sent! please check email !", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        })
+      )
       .catch((error) => console.log(error));
     console.log("Password reset email sent to:", email);
   };

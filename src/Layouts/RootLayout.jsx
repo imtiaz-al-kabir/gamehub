@@ -1,13 +1,12 @@
 import { Outlet, useMatch } from "react-router";
-import Navbar from "../Components/Navbar";
+import { ToastContainer } from "react-toastify";
 import Footer from "../Components/Footer";
+import Navbar from "../Components/Navbar";
 
 const RootLayout = () => {
-  const match = 
-  useMatch("/games/:id") 
-  
-  
-  // || 
+  const match = useMatch("/games/:id");
+
+  // ||
   // useMatch("/about")||
   // useMatch("/contact");
   return (
@@ -17,9 +16,10 @@ const RootLayout = () => {
       </header>
 
       {/* <div className={`${match ? "" : "container mx-auto "}`}> */}
-        <Outlet />
+      <Outlet />
       {/* </div> */}
-      <Footer/>
+      <Footer />
+      <ToastContainer />
     </div>
   );
 };
