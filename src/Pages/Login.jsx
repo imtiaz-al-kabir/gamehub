@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { use, useState } from "react";
+import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 import { Link, useLocation, useNavigate } from "react-router";
 import GoogleLogin from "../Components/GoogleLogin";
 import { AuthContext } from "../Context/AuthContext";
@@ -9,20 +10,21 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [error, setError] = useState("");
+  const [show, setShow] = useState(false); // toggle password visibility
+
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     loginUser(email, password)
       .then((result) => {
-        result.user;
         navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => setError(error.message));
   };
 
   return (
-    <div className="min-h-screen   bg-gradient-to-br from-black via-red-900/40 to-black flex justify-center items-center px-6 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-black via-red-900/40 to-black flex justify-center items-center px-6 py-16">
       <title>Login-GameHub</title>
       <motion.div
         className="w-full max-w-md bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl p-10 flex flex-col gap-6 border border-red-500/20"
@@ -37,7 +39,7 @@ const Login = () => {
           Welcome back, fellow gamer 👾
         </p>
 
-        <form onSubmit={handleLogin} className="flex flex-col gap-4">
+        <form onSubmit={handleLogin} className="flex flex-col gap-4 relative">
           <motion.input
             name="email"
             type="email"
@@ -45,13 +47,23 @@ const Login = () => {
             className="p-3 rounded-lg bg-black/30 text-white placeholder-gray-400 border border-red-500/20 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
             whileFocus={{ scale: 1.02 }}
           />
-          <motion.input
-            name="password"
-            type="password"
-            placeholder="Enter Password"
-            className="p-3 rounded-lg bg-black/30 text-white placeholder-gray-400 border border-red-500/20 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
-            whileFocus={{ scale: 1.02 }}
-          />
+
+          {/* Password input with eye icon */}
+          <div className="relative">
+            <motion.input
+              name="password"
+              type={show ? "text" : "password"} // toggle type
+              placeholder="Enter Password"
+              className="w-full p-3 rounded-lg bg-black/30 text-white placeholder-gray-400 border border-red-500/20 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
+              whileFocus={{ scale: 1.02 }}
+            />
+            <div
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 cursor-pointer"
+              onClick={() => setShow(!show)}
+            >
+              {show ? <IoIosEyeOff size={22} /> : <IoIosEye size={22} />}
+            </div>
+          </div>
 
           <div className="flex justify-end text-sm">
             <Link
@@ -71,7 +83,9 @@ const Login = () => {
             Login
           </motion.button>
         </form>
+
         {error && <p className="text-red-500 text-sm">{error}</p>}
+
         <div className="relative my-3">
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-gray-500/40"></div>
@@ -80,6 +94,7 @@ const Login = () => {
             <span className="bg-black px-3">OR</span>
           </div>
         </div>
+
         <GoogleLogin />
 
         <p className="text-center text-gray-300 mt-4">

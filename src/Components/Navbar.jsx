@@ -105,12 +105,20 @@ const Navbar = () => {
               <Logout />
             </div>
           ) : (
-            <Link
-              to="/login"
-              className="px-5 py-2 bg-gradient-to-r from-red-600 to-red-400 text-white rounded-lg font-semibold hover:from-red-500 hover:to-pink-500 transition-all duration-300"
-            >
-              Login
-            </Link>
+            <div className="space-x-5">
+              <Link
+                to="/login"
+                className="px-5 py-2 bg-gradient-to-r from-red-600 to-red-400 text-white rounded-lg font-semibold hover:from-red-500 hover:to-pink-500 transition-all duration-300"
+              >
+                Login
+              </Link>
+              <Link
+                to="/register"
+                className="px-5 py-2 bg-gradient-to-r from-red-600 to-red-400 text-white rounded-lg font-semibold hover:from-red-500 hover:to-pink-500 transition-all duration-300"
+              >
+                Sign up
+              </Link>
+            </div>
           )}
         </div>
       </div>

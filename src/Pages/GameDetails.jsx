@@ -2,15 +2,12 @@ import { motion } from "motion/react";
 import { use } from "react";
 import { CiStar } from "react-icons/ci";
 import { TbArrowRightRhombusFilled } from "react-icons/tb";
-import { Link, useLocation, useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import Loading from "../Components/Loading";
 import { DataContext } from "../Context/DataContext";
 const GameDetails = () => {
-  const location = useLocation();
-  console.log(location);
   const { id } = useParams();
   const { games } = use(DataContext);
-
   const game = games.find((g) => g.id === id);
   console.log(game);
   const {

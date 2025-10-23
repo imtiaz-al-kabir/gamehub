@@ -4,7 +4,7 @@ const GameCard = ({ game }) => {
   const { id, title, coverPhoto, ratings, category, developer, downloadLink } =
     game;
   return (
-    <Link to={`/games/${id}`} state={game}>
+    <Link to={`/games/${id}`} >
       <div className="bg-[#0e0e10] border border-gray-700 rounded-2xl overflow-hidden shadow-lg hover:shadow-red-600/40 hover:scale-[1.03] transition-all duration-300">
         <div className="relative">
           <img
