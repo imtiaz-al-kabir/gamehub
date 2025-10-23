@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 const Loading = () => {
   return (
     <div className="flex flex-col justify-center items-center h-screen bg-gradient-to-b from-black via-[#1a1a1a] to-black text-white">
-      {/* Animated logo or circle */}
       <motion.div
         className="w-20 h-20 border-4 border-red-500 border-t-transparent rounded-full"
         animate={{ rotate: 360 }}
@@ -14,7 +13,6 @@ const Loading = () => {
         }}
       ></motion.div>
 
-      {/* Animated text */}
       <motion.h2
         className="mt-6 text-2xl font-bold tracking-widest"
         initial={{ opacity: 0, y: 20 }}
