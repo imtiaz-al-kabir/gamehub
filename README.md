@@ -1,16 +1,30 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# GameHub
 
-Currently, two official plugins are available:
+## 🚀 Project Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+GameHub is a modern web application designed for gamers to explore, discover, and learn about various games. Users can view game details, ratings, and even reset their account password securely. The app leverages React, Tailwind CSS, and motion animations for a smooth and engaging user experience.
 
-## React Compiler
+## 🌐 Live URL
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[View Live Project](https://gamehub-gamer.web.app/)
 
-## Expanding the ESLint configuration
+## ✨ Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Browse a curated list of games with dynamic cards.
+- Animated game cards using **Motion** for smooth transitions.
+- User authentication, including login, registration, and password reset.
+- Responsive design with **Tailwind CSS**, ensuring mobile-first experience.
+- Real-time notifications using **React Toastify**.
+- Password reset functionality that redirects users to their email client.
+- Clean, modern UI with dark theme and gradient backgrounds.
+
+## 🛠️ NPM Packages Used
+
+- **react** – JavaScript library for building user interfaces.
+- **react-router** – For routing and navigation between pages.
+- **motion/react** – For animations in components.
+- **react-toastify** – For toast notifications.
+- **tailwindcss** – Utility-first CSS framework for styling.
+- **firebase** (or your chosen backend) – For authentication and user management.
+- **react-icons** – For scalable icons in UI.

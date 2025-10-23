@@ -10,21 +10,31 @@ const ResetPassword = () => {
   const handleReset = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
+
     resetPassword(email)
-      .then(() =>
-        toast.success("🦄 Email has been sent! please check email !", {
+      .then(() => {
+        toast.success("🦄 Email has been sent! Please check your email.", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: false,
-          closeOnClick: false,
+          closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
-          progress: undefined,
           theme: "colored",
-        })
-      )
-      .catch((error) => console.log(error));
-    console.log("Password reset email sent to:", email);
+        });
+
+        console.log("Password reset email sent to:", email);
+
+        window.open("https://mail.google.com/", "_blank");
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error("Failed to send reset email.", {
+          position: "top-center",
+          autoClose: 2000,
+          theme: "colored",
+        });
+      });
   };
 
   return (
@@ -35,7 +45,6 @@ const ResetPassword = () => {
         transition={{ duration: 0.6 }}
         className="bg-black/70 backdrop-blur-md rounded-2xl p-8 md:p-10 w-[90%] max-w-md border border-red-700 shadow-lg"
       >
-        {/* Title */}
         <h2 className="text-3xl font-orbitron text-center text-red-500 mb-2">
           Reset Password
         </h2>
@@ -65,7 +74,6 @@ const ResetPassword = () => {
           </button>
         </form>
 
-        {/* Back to login */}
         <p className="text-center text-gray-400 mt-6 text-sm">
           Remember your password?{" "}
           <Link
