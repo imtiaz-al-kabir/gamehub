@@ -24,7 +24,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className=" bg-gradient-to-b from-black via-[#462022] to-black text-white shadow">
+    <div className=" bg-gradient-to-b from-black via-[#462022] to-black text-white shadow px-3">
       <div className="navbar container mx-auto ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -105,16 +105,16 @@ const Navbar = () => {
               <Logout />
             </div>
           ) : (
-            <div className="space-x-5">
+            <div className="flex gap-2 md:gap-4">
               <Link
                 to="/login"
-                className="px-5 py-2 bg-gradient-to-r from-red-600 to-red-400 text-white rounded-lg font-semibold hover:from-red-500 hover:to-pink-500 transition-all duration-300"
+                className="px-3 md:px-5 py-2 bg-gradient-to-r from-red-600 to-red-400 text-white rounded-lg font-semibold hover:from-red-500 hover:to-pink-500 transition-all duration-300"
               >
                 Login
               </Link>
               <Link
                 to="/register"
-                className="px-5 py-2 bg-gradient-to-r from-red-600 to-red-400 text-white rounded-lg font-semibold hover:from-red-500 hover:to-pink-500 transition-all duration-300"
+                className="px-3 md:px-5 py-2 bg-gradient-to-r from-red-600 to-red-400 text-white rounded-lg font-semibold hover:from-red-500 hover:to-pink-500 transition-all duration-300"
               >
                 Sign up
               </Link>
