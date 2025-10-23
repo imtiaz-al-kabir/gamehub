@@ -1,6 +1,11 @@
+import { use } from "react";
 import { Link, NavLink } from "react-router";
-
+import { AuthContext } from "../Context/AuthContext";
+import { FaUserCircle } from "react-icons/fa";
+import Logout from "./Logout";
 const Navbar = () => {
+
+  const {user}=use(AuthContext)
   const navLink = [
     {
       label: "Home",
@@ -87,12 +92,27 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link
-            to={"/login"}
-            className="btn px-5 text-xl !font-orbitron bg-gradient-to-r from-red-600 to-red-400 text-white py-2 rounded-lg font-semibold hover:from-red-500 hover:to-pink-500 transition-all duration-300"
-          >
-            Login
-          </Link>
+          {user ? (
+            <div className="flex items-center gap-3">
+              {/* User Image */}
+              <img
+                src={user.photoURL || <FaUserCircle />}
+                alt="User"
+                className="w-10 h-10 rounded-full border-2 border-red-600 object-cover cursor-pointer hover:scale-105 transition"
+                title={user.displayName || "User"}
+              />
+
+              {/* Logout Button */}
+              <Logout/>
+            </div>
+          ) : (
+            <Link
+              to="/login"
+              className="px-5 py-2 bg-gradient-to-r from-red-600 to-red-400 text-white rounded-lg font-semibold hover:from-red-500 hover:to-pink-500 transition-all duration-300"
+            >
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { Outlet, useMatch } from "react-router";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const RootLayout = () => {
   const match = 
@@ -15,9 +16,10 @@ const RootLayout = () => {
         <Navbar />
       </header>
 
-      <div className={`${match ? "" : "container mx-auto "}`}>
+      {/* <div className={`${match ? "" : "container mx-auto "}`}> */}
         <Outlet />
-      </div>
+      {/* </div> */}
+      <Footer/>
     </div>
   );
 };
