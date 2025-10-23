@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router";
+import ResetPassword from "../Components/ResetPassword";
 import RootLayout from "../Layouts/RootLayout";
 import About from "../Pages/About";
 import Contact from "../Pages/Contact";
@@ -10,7 +11,6 @@ import Login from "../Pages/Login";
 import Profile from "../Pages/Profile";
 import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute";
-import ResetPassword from "../Components/ResetPassword";
 
 const router = createBrowserRouter([
   {
@@ -52,7 +52,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/profile",
-        Component: Profile,
+        element: (
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/reset",

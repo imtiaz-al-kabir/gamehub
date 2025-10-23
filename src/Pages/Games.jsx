@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { use } from "react";
 import GameCard from "../Components/GameCard";
+import Loading from "../Components/Loading";
 import { DataContext } from "../Context/DataContext";
 
 const Games = () => {
@@ -25,6 +26,9 @@ const Games = () => {
     },
   };
 
+  if (!games || games.length === 0) {
+    return <Loading />;
+  }
   return (
     <div className="py-10 container mx-auto">
       <title>Games - GameHub</title>

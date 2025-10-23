@@ -35,7 +35,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-[#1a1a1a] to-black flex justify-center items-center p-6">
+    <div className="min-h-screen  flex justify-center items-center p-6">
       <div className="w-full max-w-md bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl p-8 flex flex-col gap-6">
         <h1 className="text-3xl font-bold text-red-500 text-center">
           My Profile
@@ -73,7 +73,7 @@ const Profile = () => {
 
           <button
             type="submit"
-            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-red-500/50 transition-all duration-300"
+            className="px-3 md:px-5 py-2 bg-gradient-to-r from-red-600 to-red-400 text-white rounded-lg font-semibold hover:from-red-500 hover:to-pink-500 transition-all duration-300"
           >
             Update Profile
           </button>

@@ -29,17 +29,21 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
-  const resetPassword=(email)=>{
-
-     return sendPasswordResetEmail(auth, email)
-  }
-const updateUser=(updatedData)=>{
-  return updateProfile(auth.currentUser,updatedData)
-}
+  const resetPassword = (email) => {
+    return sendPasswordResetEmail(auth, email);
+  };
+  const updateUser = (updatedData) => {
+    return updateProfile(auth.currentUser, updatedData);
+  };
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-      setLoading(false);
+      if (currentUser) {
+        setUser(currentUser);
+        setLoading(false);
+      } else {
+        setUser(null);
+        setLoading(false);
+      }
     });
     return () => unsubscribe();
   }, []);
@@ -52,7 +56,8 @@ const updateUser=(updatedData)=>{
     createUser,
     loginUser,
     signOutUser,
-    resetPassword,updateUser
+    resetPassword,
+    updateUser,
   };
   return <AuthContext value={authInfo}>{children}</AuthContext>;
 };

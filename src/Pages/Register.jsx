@@ -2,7 +2,6 @@ import { motion } from "motion/react";
 import { use, useState } from "react";
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 import { Link, useNavigate } from "react-router";
-import { toast } from "react-toastify";
 import GoogleLogin from "../Components/GoogleLogin";
 import { AuthContext } from "../Context/AuthContext";
 
@@ -31,16 +30,6 @@ const Register = () => {
         updateUser({ displayName: name, photoURL: photo })
           .then(() => setUser(result.user))
           .catch((error) => setError(error.message));
-        toast.success("🦄 Account Created Successfully!", {
-          position: "top-center",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-        });
         e.target.reset();
         navigate("/");
       })
