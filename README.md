@@ -26,5 +26,5 @@ GameHub is a modern web application designed for gamers to explore, discover, an
 - **motion/react** – For animations in components.
 - **react-toastify** – For toast notifications.
 - **tailwindcss** – Utility-first CSS framework for styling.
-- **firebase** (or your chosen backend) – For authentication and user management.
+- **firebase** – For authentication and user management.
 - **react-icons** – For scalable icons in UI.
