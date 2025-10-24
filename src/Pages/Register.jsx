@@ -49,7 +49,7 @@ const Register = () => {
           Sign Up
         </h1>
         <p className="text-gray-300 text-center mb-2">
-          Create your account and join the squad 🚀
+          Create your account and join the squad 
         </p>
 
         <form onSubmit={handleRegister} className="flex flex-col gap-4">

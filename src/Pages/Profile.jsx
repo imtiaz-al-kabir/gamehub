@@ -27,7 +27,7 @@ const Profile = () => {
     updateProfile(auth.currentUser, { displayName: name, photoURL })
       .then(() => setSuccess("Profile updated successfully!"))
       .catch((err) => console.error(err));
-    setSuccess("Profile updated successfully! (Demo)");
+    setSuccess("Profile updated successfully!");
   };
 
   if (!user) {

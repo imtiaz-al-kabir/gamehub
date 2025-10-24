@@ -32,7 +32,7 @@ const Games = () => {
   return (
     <div className="py-10 container mx-auto">
       <title>Games - GameHub</title>
-
+      <h1 className="text-4xl !font-orbitron text-center pb-5 font-bold text-red-500">Games Collection</h1>
       <motion.div
         variants={containerVariants}
         initial="hidden"
