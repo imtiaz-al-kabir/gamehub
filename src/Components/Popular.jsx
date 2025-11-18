@@ -36,7 +36,7 @@ const Popular = () => {
   return (
     <div className="overflow-hidden py-6 container mx-auto">
       <div className="flex justify-between items-center mx-5 mb-8">
-        <p className="!font-orbitron font-bold text-2xl text-white ">
+        <p className="!font-orbitron font-bold text-lg md:text-2xl text-white ">
           POPULAR GAMES <span className="text-xs">({topGames.length})</span>
         </p>
         <Link
