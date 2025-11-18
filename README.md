@@ -12,10 +12,9 @@ GameHub provides gamers with a curated list of games, dynamic cards with animati
 
 ## 🖼️ Project Screenshot
 
-```md
-![GameHub Screenshot](./screenshot.png)
-```
-
+<p align="center">
+  <img src="./public/image.png" alt="Hero IO Screenshot" width="700"/>
+</p>
 
 
 ---
