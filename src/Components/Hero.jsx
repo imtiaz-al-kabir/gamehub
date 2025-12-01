@@ -6,8 +6,8 @@ const Hero = () => {
         Find Your Desire Game
       </h1>
 
-      <div className="px-5">
-        <img src={banner} alt="" />
+      <div className="px-5 ">
+        <img className="lg:h-[600px]" src={banner} alt="" />
       </div>
     </div>
   );
